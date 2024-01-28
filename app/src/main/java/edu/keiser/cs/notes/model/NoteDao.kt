@@ -1,11 +1,12 @@
-package edu.keiser.cs.notes
+package edu.keiser.cs.notes.model
 
 import androidx.room.Dao
 import androidx.room.Query
+import edu.keiser.cs.notes.model.Note
 
 @Dao
 interface NoteDao  {
-    @Query("INSERT INTO notes (contents) VALUES('NEW note')")
+    @Query("INSERT INTO notes (contents) VALUES('default note')")
     fun create()
 
     @Query("SELECT * FROM notes")

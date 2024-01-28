@@ -1,8 +1,11 @@
-package edu.keiser.cs.notes
+package edu.keiser.cs.notes.view
 
 import android.os.Bundle
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import edu.keiser.cs.notes.R
+import edu.keiser.cs.notes.model.DatabaseInstance
+import edu.keiser.cs.notes.model.NotesDatabase
 
 class NoteActivity : AppCompatActivity() {
     private lateinit var db: NotesDatabase

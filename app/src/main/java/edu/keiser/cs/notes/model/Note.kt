@@ -1,4 +1,4 @@
-package edu.keiser.cs.notes
+package edu.keiser.cs.notes.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

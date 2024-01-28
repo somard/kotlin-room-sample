@@ -1,12 +1,13 @@
-package edu.keiser.cs.notes
+package edu.keiser.cs.notes.view
 
-import android.content.Context
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
-import androidx.room.Room
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import edu.keiser.cs.notes.R
+import edu.keiser.cs.notes.model.DatabaseInstance
+import edu.keiser.cs.notes.control.NoteAdapter
+import edu.keiser.cs.notes.model.NotesDatabase
 
 class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         adapter = NoteAdapter()
         recyclerView.adapter = adapter
+        recyclerView.addItemDecoration(RecyclerViewDecorator(16))
 
         findViewById<FloatingActionButton>(R.id.btn_add_note).setOnClickListener {
             db.noteDao().create()

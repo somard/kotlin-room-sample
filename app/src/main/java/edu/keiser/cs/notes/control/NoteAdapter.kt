@@ -1,4 +1,4 @@
-package edu.keiser.cs.notes
+package edu.keiser.cs.notes.control
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -6,11 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import edu.keiser.cs.notes.view.NoteActivity
+import edu.keiser.cs.notes.R
 import edu.keiser.cs.notes.R.id.note_body
-import edu.keiser.cs.notes.R.id.note_card_container
 import edu.keiser.cs.notes.R.id.tv_note
+import edu.keiser.cs.notes.model.Note
+import edu.keiser.cs.notes.model.NotesDatabase
 
 class NoteAdapter : RecyclerView.Adapter<NoteAdapter.ViewHolder>() {
     private var allNotes = mutableListOf<Note>()
